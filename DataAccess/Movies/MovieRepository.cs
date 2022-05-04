@@ -19,7 +19,7 @@ namespace DataAccess.Movies
         public MovieDa GetMovieByTitle(string title)
         {
             const string query = @"SELECT * FROM movies WHERE title = @title";
-            return _connection.Query<MovieDa>(query, new {title}).SingleOrDefault();
+            return _connection.Query<MovieDa>(query, new {title}).FirstOrDefault();
         }
     }
 }

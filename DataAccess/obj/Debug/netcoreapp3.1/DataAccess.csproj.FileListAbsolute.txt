@@ -8,3 +8,13 @@ C:\Users\Sjunn\source\repos\SEP6-Backend-WebAPI\DataAccess\obj\Debug\netcoreapp3
 C:\Users\Sjunn\source\repos\SEP6-Backend-WebAPI\DataAccess\obj\Debug\netcoreapp3.1\DataAccess.csproj.CoreCompileInputs.cache
 C:\Users\Sjunn\source\repos\SEP6-Backend-WebAPI\DataAccess\obj\Debug\netcoreapp3.1\DataAccess.dll
 C:\Users\Sjunn\source\repos\SEP6-Backend-WebAPI\DataAccess\obj\Debug\netcoreapp3.1\DataAccess.pdb
+C:\Users\mlsj\Source\Repos\Sjunne\SEP6-Backend-WebAPI\DataAccess\bin\Debug\netcoreapp3.1\DataAccess.deps.json
+C:\Users\mlsj\Source\Repos\Sjunne\SEP6-Backend-WebAPI\DataAccess\bin\Debug\netcoreapp3.1\DataAccess.dll
+C:\Users\mlsj\Source\Repos\Sjunne\SEP6-Backend-WebAPI\DataAccess\bin\Debug\netcoreapp3.1\DataAccess.pdb
+C:\Users\mlsj\Source\Repos\Sjunne\SEP6-Backend-WebAPI\DataAccess\obj\Debug\netcoreapp3.1\DataAccess.csproj.AssemblyReference.cache
+C:\Users\mlsj\Source\Repos\Sjunne\SEP6-Backend-WebAPI\DataAccess\obj\Debug\netcoreapp3.1\DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mlsj\Source\Repos\Sjunne\SEP6-Backend-WebAPI\DataAccess\obj\Debug\netcoreapp3.1\DataAccess.AssemblyInfoInputs.cache
+C:\Users\mlsj\Source\Repos\Sjunne\SEP6-Backend-WebAPI\DataAccess\obj\Debug\netcoreapp3.1\DataAccess.AssemblyInfo.cs
+C:\Users\mlsj\Source\Repos\Sjunne\SEP6-Backend-WebAPI\DataAccess\obj\Debug\netcoreapp3.1\DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\mlsj\Source\Repos\Sjunne\SEP6-Backend-WebAPI\DataAccess\obj\Debug\netcoreapp3.1\DataAccess.dll
+C:\Users\mlsj\Source\Repos\Sjunne\SEP6-Backend-WebAPI\DataAccess\obj\Debug\netcoreapp3.1\DataAccess.pdb

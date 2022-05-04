@@ -11,3 +11,16 @@ C:\Users\Sjunn\source\repos\SEP6-Backend-WebAPI\BuissnessLogic\obj\Debug\netcore
 C:\Users\Sjunn\source\repos\SEP6-Backend-WebAPI\BuissnessLogic\obj\Debug\netcoreapp3.1\BuissnessLogic.csproj.CopyComplete
 C:\Users\Sjunn\source\repos\SEP6-Backend-WebAPI\BuissnessLogic\obj\Debug\netcoreapp3.1\BuissnessLogic.dll
 C:\Users\Sjunn\source\repos\SEP6-Backend-WebAPI\BuissnessLogic\obj\Debug\netcoreapp3.1\BuissnessLogic.pdb
+C:\Users\mlsj\Source\Repos\Sjunne\SEP6-Backend-WebAPI\BuissnessLogic\bin\Debug\netcoreapp3.1\BuissnessLogic.deps.json
+C:\Users\mlsj\Source\Repos\Sjunne\SEP6-Backend-WebAPI\BuissnessLogic\bin\Debug\netcoreapp3.1\BuissnessLogic.dll
+C:\Users\mlsj\Source\Repos\Sjunne\SEP6-Backend-WebAPI\BuissnessLogic\bin\Debug\netcoreapp3.1\BuissnessLogic.pdb
+C:\Users\mlsj\Source\Repos\Sjunne\SEP6-Backend-WebAPI\BuissnessLogic\bin\Debug\netcoreapp3.1\DataAccess.dll
+C:\Users\mlsj\Source\Repos\Sjunne\SEP6-Backend-WebAPI\BuissnessLogic\bin\Debug\netcoreapp3.1\DataAccess.pdb
+C:\Users\mlsj\Source\Repos\Sjunne\SEP6-Backend-WebAPI\BuissnessLogic\obj\Debug\netcoreapp3.1\BuissnessLogic.csproj.AssemblyReference.cache
+C:\Users\mlsj\Source\Repos\Sjunne\SEP6-Backend-WebAPI\BuissnessLogic\obj\Debug\netcoreapp3.1\BuissnessLogic.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mlsj\Source\Repos\Sjunne\SEP6-Backend-WebAPI\BuissnessLogic\obj\Debug\netcoreapp3.1\BuissnessLogic.AssemblyInfoInputs.cache
+C:\Users\mlsj\Source\Repos\Sjunne\SEP6-Backend-WebAPI\BuissnessLogic\obj\Debug\netcoreapp3.1\BuissnessLogic.AssemblyInfo.cs
+C:\Users\mlsj\Source\Repos\Sjunne\SEP6-Backend-WebAPI\BuissnessLogic\obj\Debug\netcoreapp3.1\BuissnessLogic.csproj.CoreCompileInputs.cache
+C:\Users\mlsj\Source\Repos\Sjunne\SEP6-Backend-WebAPI\BuissnessLogic\obj\Debug\netcoreapp3.1\BuissnessLogic.csproj.CopyComplete
+C:\Users\mlsj\Source\Repos\Sjunne\SEP6-Backend-WebAPI\BuissnessLogic\obj\Debug\netcoreapp3.1\BuissnessLogic.dll
+C:\Users\mlsj\Source\Repos\Sjunne\SEP6-Backend-WebAPI\BuissnessLogic\obj\Debug\netcoreapp3.1\BuissnessLogic.pdb

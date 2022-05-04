@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Sjunn\\source\\repos\\SEP6-Backend-WebAPI\\BuissnessLogic\\BuissnessLogic.csproj": {}
+    "C:\\Users\\mlsj\\source\\repos\\Sjunne\\SEP6-Backend-WebAPI\\BuissnessLogic\\BuissnessLogic.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Sjunn\\source\\repos\\SEP6-Backend-WebAPI\\BuissnessLogic\\BuissnessLogic.csproj": {
+    "C:\\Users\\mlsj\\source\\repos\\Sjunne\\SEP6-Backend-WebAPI\\BuissnessLogic\\BuissnessLogic.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Sjunn\\source\\repos\\SEP6-Backend-WebAPI\\BuissnessLogic\\BuissnessLogic.csproj",
+        "projectUniqueName": "C:\\Users\\mlsj\\source\\repos\\Sjunne\\SEP6-Backend-WebAPI\\BuissnessLogic\\BuissnessLogic.csproj",
         "projectName": "BuissnessLogic",
-        "projectPath": "C:\\Users\\Sjunn\\source\\repos\\SEP6-Backend-WebAPI\\BuissnessLogic\\BuissnessLogic.csproj",
-        "packagesPath": "C:\\Users\\Sjunn\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Sjunn\\source\\repos\\SEP6-Backend-WebAPI\\BuissnessLogic\\obj\\",
+        "projectPath": "C:\\Users\\mlsj\\source\\repos\\Sjunne\\SEP6-Backend-WebAPI\\BuissnessLogic\\BuissnessLogic.csproj",
+        "packagesPath": "C:\\Users\\mlsj\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\mlsj\\source\\repos\\Sjunne\\SEP6-Backend-WebAPI\\BuissnessLogic\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Sjunn\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\mlsj\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,8 +28,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\Sjunn\\source\\repos\\SEP6-Backend-WebAPI\\DataAccess\\DataAccess.csproj": {
-                "projectPath": "C:\\Users\\Sjunn\\source\\repos\\SEP6-Backend-WebAPI\\DataAccess\\DataAccess.csproj"
+              "C:\\Users\\mlsj\\source\\repos\\Sjunne\\SEP6-Backend-WebAPI\\DataAccess\\DataAccess.csproj": {
+                "projectPath": "C:\\Users\\mlsj\\source\\repos\\Sjunne\\SEP6-Backend-WebAPI\\DataAccess\\DataAccess.csproj"
               }
             }
           }
@@ -62,17 +62,17 @@
         }
       }
     },
-    "C:\\Users\\Sjunn\\source\\repos\\SEP6-Backend-WebAPI\\DataAccess\\DataAccess.csproj": {
+    "C:\\Users\\mlsj\\source\\repos\\Sjunne\\SEP6-Backend-WebAPI\\DataAccess\\DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Sjunn\\source\\repos\\SEP6-Backend-WebAPI\\DataAccess\\DataAccess.csproj",
+        "projectUniqueName": "C:\\Users\\mlsj\\source\\repos\\Sjunne\\SEP6-Backend-WebAPI\\DataAccess\\DataAccess.csproj",
         "projectName": "DataAccess",
-        "projectPath": "C:\\Users\\Sjunn\\source\\repos\\SEP6-Backend-WebAPI\\DataAccess\\DataAccess.csproj",
-        "packagesPath": "C:\\Users\\Sjunn\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Sjunn\\source\\repos\\SEP6-Backend-WebAPI\\DataAccess\\obj\\",
+        "projectPath": "C:\\Users\\mlsj\\source\\repos\\Sjunne\\SEP6-Backend-WebAPI\\DataAccess\\DataAccess.csproj",
+        "packagesPath": "C:\\Users\\mlsj\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\mlsj\\source\\repos\\Sjunne\\SEP6-Backend-WebAPI\\DataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Sjunn\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\mlsj\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

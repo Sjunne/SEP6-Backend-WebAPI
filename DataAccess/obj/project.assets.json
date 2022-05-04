@@ -725,19 +725,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Sjunn\\.nuget\\packages\\": {}
+    "C:\\Users\\mlsj\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Sjunn\\source\\repos\\SEP6-Backend-WebAPI\\DataAccess\\DataAccess.csproj",
+      "projectUniqueName": "C:\\Users\\mlsj\\Source\\Repos\\Sjunne\\SEP6-Backend-WebAPI\\DataAccess\\DataAccess.csproj",
       "projectName": "DataAccess",
-      "projectPath": "C:\\Users\\Sjunn\\source\\repos\\SEP6-Backend-WebAPI\\DataAccess\\DataAccess.csproj",
-      "packagesPath": "C:\\Users\\Sjunn\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Sjunn\\source\\repos\\SEP6-Backend-WebAPI\\DataAccess\\obj\\",
+      "projectPath": "C:\\Users\\mlsj\\Source\\Repos\\Sjunne\\SEP6-Backend-WebAPI\\DataAccess\\DataAccess.csproj",
+      "packagesPath": "C:\\Users\\mlsj\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\mlsj\\Source\\Repos\\Sjunne\\SEP6-Backend-WebAPI\\DataAccess\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Sjunn\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\mlsj\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

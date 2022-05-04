@@ -28,7 +28,7 @@ namespace SEP6_Backend_WebAPI
         {
             var appSettings = Configuration.GetSection("AppSettings").Get<AppSettings>();
             var daFactory = new DaFactory(appSettings.DatabaseConnectionString);
-            services.AddSingleton(daFactory);
+            services.AddSingleton<IDaFactory>(daFactory);
             services.AddControllers();
             services.AddSwaggerGen(options =>
             {
