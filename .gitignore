@@ -32,3 +32,4 @@
 *.app
 
 SEP6-Backend-WebAPI\SEP6-Backend-WebAPI\appsettings.json
+/SEP6-Backend-WebAPI/appsettings.json
