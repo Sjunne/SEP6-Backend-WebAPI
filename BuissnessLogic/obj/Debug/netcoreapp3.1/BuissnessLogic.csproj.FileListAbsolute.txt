@@ -1,0 +1,13 @@
+C:\Users\Sjunn\source\repos\SEP6-Backend-WebAPI\BuissnessLogic\bin\Debug\netcoreapp3.1\BuissnessLogic.deps.json
+C:\Users\Sjunn\source\repos\SEP6-Backend-WebAPI\BuissnessLogic\bin\Debug\netcoreapp3.1\BuissnessLogic.dll
+C:\Users\Sjunn\source\repos\SEP6-Backend-WebAPI\BuissnessLogic\bin\Debug\netcoreapp3.1\BuissnessLogic.pdb
+C:\Users\Sjunn\source\repos\SEP6-Backend-WebAPI\BuissnessLogic\bin\Debug\netcoreapp3.1\DataAccess.dll
+C:\Users\Sjunn\source\repos\SEP6-Backend-WebAPI\BuissnessLogic\bin\Debug\netcoreapp3.1\DataAccess.pdb
+C:\Users\Sjunn\source\repos\SEP6-Backend-WebAPI\BuissnessLogic\obj\Debug\netcoreapp3.1\BuissnessLogic.csproj.AssemblyReference.cache
+C:\Users\Sjunn\source\repos\SEP6-Backend-WebAPI\BuissnessLogic\obj\Debug\netcoreapp3.1\BuissnessLogic.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Sjunn\source\repos\SEP6-Backend-WebAPI\BuissnessLogic\obj\Debug\netcoreapp3.1\BuissnessLogic.AssemblyInfoInputs.cache
+C:\Users\Sjunn\source\repos\SEP6-Backend-WebAPI\BuissnessLogic\obj\Debug\netcoreapp3.1\BuissnessLogic.AssemblyInfo.cs
+C:\Users\Sjunn\source\repos\SEP6-Backend-WebAPI\BuissnessLogic\obj\Debug\netcoreapp3.1\BuissnessLogic.csproj.CoreCompileInputs.cache
+C:\Users\Sjunn\source\repos\SEP6-Backend-WebAPI\BuissnessLogic\obj\Debug\netcoreapp3.1\BuissnessLogic.csproj.CopyComplete
+C:\Users\Sjunn\source\repos\SEP6-Backend-WebAPI\BuissnessLogic\obj\Debug\netcoreapp3.1\BuissnessLogic.dll
+C:\Users\Sjunn\source\repos\SEP6-Backend-WebAPI\BuissnessLogic\obj\Debug\netcoreapp3.1\BuissnessLogic.pdb
