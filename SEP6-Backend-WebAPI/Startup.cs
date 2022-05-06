@@ -16,6 +16,7 @@ namespace SEP6_Backend_WebAPI
 {
     public class Startup
     {
+        private readonly string SpecificOrigin = "_specificOrigin";
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -39,6 +40,14 @@ namespace SEP6_Backend_WebAPI
                     Description = "Sample service for Learner",
                 });
             });
+            services.AddCors(cors => { cors.AddPolicy(name: 
+                    SpecificOrigin, 
+                    builder =>
+                    {
+                        builder.AllowAnyMethod()
+                            .AllowAnyHeader()
+                            .AllowAnyOrigin();
+                    }); });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -53,7 +62,7 @@ namespace SEP6_Backend_WebAPI
             app.UseHttpsRedirection();
 
             app.UseRouting();
-
+            app.UseCors(SpecificOrigin);
             app.UseAuthorization();
             
             app.UseEndpoints(endpoints =>

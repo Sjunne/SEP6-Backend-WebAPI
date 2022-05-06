@@ -1,6 +1,7 @@
 ﻿using BuissnessLogic.Handlers;
 using DataAccess.Factories;
 using DataAccess.Movies;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 
 namespace SEP6_Backend_WebAPI.Controllers
