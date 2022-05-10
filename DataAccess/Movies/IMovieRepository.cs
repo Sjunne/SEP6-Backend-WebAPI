@@ -7,5 +7,6 @@ namespace DataAccess.Movies
     public interface IMovieRepository
     {
         MovieDa GetMovieByTitle(string title);
+        List<MovieDa> GetMoviesAndImagesByTitle(string title);
     }
 }

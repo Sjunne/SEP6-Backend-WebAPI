@@ -18,5 +18,10 @@ namespace BuissnessLogic.Handlers
         {
             return _movieRepository.GetMovieByTitle(title);
         }
+        
+        public List<MovieDa> GetMoviesByTitle(string title)
+        {
+            return _movieRepository.GetMoviesAndImagesByTitle(title);
+        }
     }
 }
