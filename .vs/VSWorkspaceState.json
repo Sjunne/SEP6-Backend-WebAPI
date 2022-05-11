@@ -1,7 +1,12 @@
 {
   "ExpandedNodes": [
     "",
-    "\\SEP6-Backend-WebAPI"
+    "\\BuissnessLogic",
+    "\\BuissnessLogic\\Handlers",
+    "\\DataAccess",
+    "\\DataAccess\\Movies",
+    "\\SEP6-Backend-WebAPI",
+    "\\SEP6-Backend-WebAPI\\Controllers"
   ],
   "SelectedNode": "\\SEP6-Backend-WebAPI.sln",
   "PreviewInSolutionExplorer": false

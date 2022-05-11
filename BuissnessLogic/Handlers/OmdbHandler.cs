@@ -5,6 +5,7 @@ using System.Net;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
+using DataAccess.Movies;
 using Newtonsoft.Json;
 
 namespace BuissnessLogic.Handlers
@@ -20,9 +21,9 @@ namespace BuissnessLogic.Handlers
         }
 
 
-        public async Task<PosterOnlyObject> GetPosterByIDAsync(int Id)
+        public async Task<PosterOnlyObject> GetPosterByIDAsync(string Id)
         {
-            var url = RequestUri + $"&i=tt{Id}";
+            var url = RequestUri + $"&i=tt{Id}&plot=short";
             var responds = SendRequest(url);
             
             if(responds.IsSuccessStatusCode)
@@ -34,6 +35,11 @@ namespace BuissnessLogic.Handlers
             {
                 throw new Exception("No access too external API");
             }
+        }
+
+        public async Task<MovieDa> GetFullMovie(string id)
+        {
+
         }
 
         private HttpResponseMessage SendRequest(string content, string url)
@@ -59,11 +65,13 @@ namespace BuissnessLogic.Handlers
             return _client.SendAsync(request).Result;
         }
 
+ 
+
         public class PosterOnlyObject
         {
             public string Poster { get; set; }
+            public string Plot { get; set; }
         }
-
     }
 }
 

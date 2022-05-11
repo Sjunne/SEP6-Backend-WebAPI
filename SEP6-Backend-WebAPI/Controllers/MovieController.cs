@@ -23,9 +23,16 @@ namespace SEP6_Backend_WebAPI.Controllers
 
         [HttpGet]
         [Route("title/{title}")]
-        public MovieDa GetByTitle([FromRoute]string title)
+        public MovieDa GetByTitle([FromRoute] string title)
         {
             return _movieHandler.GetMovieByTitle(title);
+        }
+
+        [HttpGet]
+        [Route("/{id}")]
+        public MovieDa GetgetFullMovie([FromRoute] string id)
+        {
+            return _obmHandler.GetgetFullMovie(id);
         }
 
         [HttpGet]
@@ -38,7 +45,12 @@ namespace SEP6_Backend_WebAPI.Controllers
             {
                 try
                 {
-                    Movie.PosterHttp = _obmHandler.GetPosterByIDAsync(Movie.Id).Result.Poster;
+                    var obmObj = _obmHandler.GetPosterByIDAsync(Movie.Id);
+                    Movie.PosterHttp = obmObj.Result.Poster;
+                    Movie.Plot = obmObj.Result.Plot;
+
+                    if (Movie.PosterHttp == "N/A")
+                        Movie.PosterHttp = @"..\assets\not-found-image-15383864787lu.jpg";
                 }
                 catch(Exception e)
                 {
@@ -46,7 +58,6 @@ namespace SEP6_Backend_WebAPI.Controllers
                 }
             }
 
-            
             return MovieList;
         }
     }
