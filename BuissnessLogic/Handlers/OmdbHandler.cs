@@ -1,12 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using DataAccess.Movies;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 namespace BuissnessLogic.Handlers
 {
@@ -39,7 +41,33 @@ namespace BuissnessLogic.Handlers
 
         public async Task<MovieDa> GetFullMovie(string id)
         {
+            var url = RequestUri + $"&i=tt{id}&plot=full";
+            var responds = SendRequest(url);
 
+            if (responds.IsSuccessStatusCode)
+            {
+                var content = await responds.Content.ReadAsStringAsync();
+               
+                var movieDa = JsonConvert.DeserializeObject<MovieDa>(content);
+                ManipulateDataAndAddLists(movieDa);
+                return movieDa;
+            }
+            else
+            {
+                throw new Exception("No access too external API");
+            }
+
+        }
+
+        private void ManipulateDataAndAddLists(MovieDa movieDa)
+        {
+            var actorsList = movieDa.Actors.Split(',').Select(p => p.Trim());
+            List<string> list = new List<string>(actorsList);
+            movieDa.ActorList = list;
+
+            var directorsList = movieDa.Director.Split(',').Select(p => p.Trim());
+            List<string> list2 = new List<string>(directorsList);
+            movieDa.DirectorList = list2;
         }
 
         private HttpResponseMessage SendRequest(string content, string url)

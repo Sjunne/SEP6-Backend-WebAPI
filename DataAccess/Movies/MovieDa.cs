@@ -20,7 +20,7 @@ namespace DataAccess.Movies
         public string Genre { get; set; }
         public string Director { get; set; }
         public string Writer { get; set; }
-        public string Actors { get; set; }
+        public string Actors { get; set; }  
         public string Language { get; set; }
         public string Country { get; set; }
         public string Awards { get; set; }
@@ -29,5 +29,8 @@ namespace DataAccess.Movies
         public string imdbID { get; set; }
         public string Type { get; set; }
         public string Response { get; set; }
+
+        public List<string> ActorList { get; set; }
+        public List <string> DirectorList { get; set; }
     }
 }
