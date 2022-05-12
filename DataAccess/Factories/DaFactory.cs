@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Text;
+using DataAccess.Actors;
 
 namespace DataAccess.Factories
 {
@@ -19,6 +20,11 @@ namespace DataAccess.Factories
         public IMovieRepository MoviesRepository()
         {
             return new MovieRepository(_connection);
+        }
+        
+        public IActorRepository ActorRepository()
+        {
+            return new Repository(_connection);
         }
 
    

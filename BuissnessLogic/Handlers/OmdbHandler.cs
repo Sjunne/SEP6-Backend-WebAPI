@@ -39,7 +39,7 @@ namespace BuissnessLogic.Handlers
 
         public async Task<MovieDa> GetFullMovie(string id)
         {
-
+            return null;
         }
 
         private HttpResponseMessage SendRequest(string content, string url)
