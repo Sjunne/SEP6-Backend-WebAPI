@@ -2,7 +2,6 @@
   "ExpandedNodes": [
     "",
     "\\BuissnessLogic",
-    "\\BuissnessLogic\\Handlers",
     "\\DataAccess",
     "\\DataAccess\\Movies",
     "\\SEP6-Backend-WebAPI",
