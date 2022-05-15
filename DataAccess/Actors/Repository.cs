@@ -19,6 +19,5 @@ namespace DataAccess.Actors
             const string query = @"SELECT TOP(5) * FROM peoplev2 WHERE name LIKE @keyword + '%'";
             return (List<Actor>)_connection.Query<Actor>(query, new { keyword });
         }
-
     }
 }
