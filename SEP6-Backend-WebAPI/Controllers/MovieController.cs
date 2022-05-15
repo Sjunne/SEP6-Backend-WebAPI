@@ -30,7 +30,7 @@ namespace SEP6_Backend_WebAPI.Controllers
 
         [HttpGet]
         [Route("full/{id}")]
-        public MovieDa GetFullMovie([FromRoute] string id)
+        public FullMovieDa GetFullMovie([FromRoute] string id)
         {
             return _obmHandler.GetFullMovie(id).Result;
         }

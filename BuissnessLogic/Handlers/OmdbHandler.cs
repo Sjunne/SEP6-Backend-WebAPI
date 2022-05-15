@@ -39,7 +39,7 @@ namespace BuissnessLogic.Handlers
             }
         }
 
-        public async Task<MovieDa> GetFullMovie(string id)
+        public async Task<FullMovieDa> GetFullMovie(string id)
         {
             var url = RequestUri + $"&i=tt{id}&plot=full";
             var responds = SendRequest(url);
@@ -48,7 +48,7 @@ namespace BuissnessLogic.Handlers
             {
                 var content = await responds.Content.ReadAsStringAsync();
                
-                var movieDa = JsonConvert.DeserializeObject<MovieDa>(content);
+                var movieDa = JsonConvert.DeserializeObject<FullMovieDa>(content);
                 ManipulateDataAndAddLists(movieDa);
                 return movieDa;
             }
@@ -59,7 +59,7 @@ namespace BuissnessLogic.Handlers
 
         }
 
-        private void ManipulateDataAndAddLists(MovieDa movieDa)
+        private void ManipulateDataAndAddLists(FullMovieDa movieDa)
         {
             var actorsList = movieDa.Actors.Split(',').Select(p => p.Trim());
             List<string> list = new List<string>(actorsList);
