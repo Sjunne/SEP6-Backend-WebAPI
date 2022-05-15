@@ -31,5 +31,9 @@
 *.out
 *.app
 
+
+SEP6-Backend-WebAPI\.idea
 SEP6-Backend-WebAPI\SEP6-Backend-WebAPI\appsettings.json
 /SEP6-Backend-WebAPI/appsettings.json
+/.vs
+/.idea/.idea.SEP6-Backend-WebAPI
