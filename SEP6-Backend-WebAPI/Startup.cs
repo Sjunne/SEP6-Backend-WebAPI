@@ -28,7 +28,7 @@ namespace SEP6_Backend_WebAPI
         public void ConfigureServices(IServiceCollection services)
         {
             var appSettings = Configuration.GetSection("AppSettings").Get<AppSettings>();
-            var daFactory = new DaFactory(appSettings.DatabasaConnectionStringLocal);
+            var daFactory = new DaFactory(appSettings.DatabaseConnectionStringLocal);
             services.AddSingleton<IDaFactory>(daFactory);
             services.AddControllers();
             services.AddSwaggerGen(options =>

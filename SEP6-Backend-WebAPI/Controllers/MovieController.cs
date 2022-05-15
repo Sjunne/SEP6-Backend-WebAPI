@@ -37,7 +37,7 @@ namespace SEP6_Backend_WebAPI.Controllers
 
         [HttpGet]
         [Route("titleandposter/{title}")]
-        public List<MovieDa> GetAllByTitle([FromRoute]string title)
+        public List<MovieDa> GetAllByTitle([FromRoute] string title)
         {
             var MovieList = _movieHandler.GetMoviesByTitle(title);
 
@@ -52,7 +52,7 @@ namespace SEP6_Backend_WebAPI.Controllers
                     if (Movie.PosterHttp == "N/A")
                         Movie.PosterHttp = @"..\assets\not-found-image-15383864787lu.jpg";
                 }
-                catch(Exception e)
+                catch (Exception e)
                 {
                     //return StatusCode(150);
                 }

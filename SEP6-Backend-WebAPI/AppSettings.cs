@@ -3,6 +3,6 @@
     public class AppSettings
     {
         public string DatabaseConnectionString { get; set; }
-        public string DatabasaConnectionStringLocal { get; set; }
+        public string DatabaseConnectionStringLocal { get; set; }
     }
 }
