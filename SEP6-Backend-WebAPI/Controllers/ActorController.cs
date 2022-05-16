@@ -28,7 +28,7 @@ namespace SEP6_Backend_WebAPI.Controllers
             var actorList = _actorHandler.GetActorsByKeyword(keyword);
             return actorList;
         }
-        
+        /*
         [HttpGet]
         [Route("search/{keyword}")]
         public List<FullPerson> GetAllBySearch([FromRoute] string keyword)
@@ -36,5 +36,6 @@ namespace SEP6_Backend_WebAPI.Controllers
             var fullPersonList = _tmdbHandler.SearchPersonByName(keyword);
             return null;
         }
+        */
     }
 }
