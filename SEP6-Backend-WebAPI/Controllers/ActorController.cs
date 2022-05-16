@@ -17,7 +17,7 @@ namespace SEP6_Backend_WebAPI.Controllers
 
         public ActorController(IDaFactory daFactory)
         {
-            //_actorHandler = new ActorHandler(daFactory.ActorRepository());
+            _actorHandler = new ActorHandler(daFactory.ActorRepository());
             _tmdbHandler = new TmdbHandler(new System.Net.Http.HttpClient());
         }
         
