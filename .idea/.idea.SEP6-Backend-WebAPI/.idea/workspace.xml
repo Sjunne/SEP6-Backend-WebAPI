@@ -22,7 +22,22 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="503fc924-813b-48d1-b724-4917def99ecb" name="Default Changelist" comment="" />
+    <list default="true" id="503fc924-813b-48d1-b724-4917def99ecb" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SEP6-Backend-WebAPI/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SEP6-Backend-WebAPI/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BuissnessLogic/bin/Debug/netcoreapp3.1/BuissnessLogic.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/BuissnessLogic/bin/Debug/netcoreapp3.1/BuissnessLogic.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BuissnessLogic/bin/Debug/netcoreapp3.1/DataAccess.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/BuissnessLogic/bin/Debug/netcoreapp3.1/DataAccess.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BuissnessLogic/obj/Debug/netcoreapp3.1/BuissnessLogic.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/BuissnessLogic/obj/Debug/netcoreapp3.1/BuissnessLogic.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BuissnessLogic/obj/Debug/netcoreapp3.1/BuissnessLogic.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/BuissnessLogic/obj/Debug/netcoreapp3.1/BuissnessLogic.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BuissnessLogic/obj/Debug/netcoreapp3.1/BuissnessLogic.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/BuissnessLogic/obj/Debug/netcoreapp3.1/BuissnessLogic.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataAccess/bin/Debug/netcoreapp3.1/DataAccess.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/bin/Debug/netcoreapp3.1/DataAccess.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataAccess/obj/Debug/netcoreapp3.1/DataAccess.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/obj/Debug/netcoreapp3.1/DataAccess.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SEP6-Backend-WebAPI/Controllers/ActorController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SEP6-Backend-WebAPI/Controllers/ActorController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SEP6-Backend-WebAPI/bin/Debug/netcoreapp3.1/BuissnessLogic.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/SEP6-Backend-WebAPI/bin/Debug/netcoreapp3.1/BuissnessLogic.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SEP6-Backend-WebAPI/bin/Debug/netcoreapp3.1/DataAccess.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/SEP6-Backend-WebAPI/bin/Debug/netcoreapp3.1/DataAccess.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SEP6-Backend-WebAPI/bin/Debug/netcoreapp3.1/SEP6-Backend-WebAPI.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/SEP6-Backend-WebAPI/bin/Debug/netcoreapp3.1/SEP6-Backend-WebAPI.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SEP6-Backend-WebAPI/obj/Debug/netcoreapp3.1/SEP6-Backend-WebAPI.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/SEP6-Backend-WebAPI/obj/Debug/netcoreapp3.1/SEP6-Backend-WebAPI.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SEP6-Backend-WebAPI/obj/Debug/netcoreapp3.1/SEP6-Backend-WebAPI.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/SEP6-Backend-WebAPI/obj/Debug/netcoreapp3.1/SEP6-Backend-WebAPI.pdb" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -45,9 +60,9 @@
         <option value="$PROJECT_DIR$/SEP6-Backend-WebAPI/Controllers/MovieController.cs" />
         <option value="$PROJECT_DIR$/DataAccess/Factories/IDaFactory.cs" />
         <option value="$PROJECT_DIR$/DataAccess/Factories/DaFactory.cs" />
-        <option value="$PROJECT_DIR$/SEP6-Backend-WebAPI/Controllers/ActorController.cs" />
         <option value="$PROJECT_DIR$/DataAccess/Actors/Repository.cs" />
         <option value="$PROJECT_DIR$/BuissnessLogic/Handlers/TmdbHandler.cs" />
+        <option value="$PROJECT_DIR$/SEP6-Backend-WebAPI/Controllers/ActorController.cs" />
       </list>
     </option>
   </component>
@@ -109,7 +124,8 @@
       <workItem from="1651659204260" duration="5861000" />
       <workItem from="1651831256491" duration="742000" />
       <workItem from="1652084219564" duration="3951000" />
-      <workItem from="1652182140830" duration="16782000" />
+      <workItem from="1652182140830" duration="19252000" />
+      <workItem from="1652688275371" duration="220000" />
     </task>
     <servers />
   </component>
@@ -134,22 +150,22 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1306" height="209" key="GridCell.Tab.0.bottom" timestamp="1652348392868">
+    <state width="1323" height="212" key="GridCell.Tab.0.bottom" timestamp="1652606928284">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1306" height="209" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1652348392868" />
-    <state width="1306" height="209" key="GridCell.Tab.0.center" timestamp="1652348392867">
+    <state width="1323" height="212" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1652606928284" />
+    <state width="1323" height="212" key="GridCell.Tab.0.center" timestamp="1652606928284">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1306" height="209" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1652348392867" />
-    <state width="1306" height="209" key="GridCell.Tab.0.left" timestamp="1652348392863">
+    <state width="1323" height="212" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1652606928284" />
+    <state width="1323" height="212" key="GridCell.Tab.0.left" timestamp="1652606928284">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1306" height="209" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1652348392863" />
-    <state width="1306" height="209" key="GridCell.Tab.0.right" timestamp="1652348392867">
+    <state width="1323" height="212" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1652606928284" />
+    <state width="1323" height="212" key="GridCell.Tab.0.right" timestamp="1652606928284">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1306" height="209" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1652348392867" />
+    <state width="1323" height="212" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1652606928284" />
     <state width="1306" height="247" key="GridCell.Tab.1.bottom" timestamp="1652268720831">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
