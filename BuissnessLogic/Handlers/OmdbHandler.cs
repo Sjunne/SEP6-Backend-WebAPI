@@ -14,8 +14,8 @@ namespace BuissnessLogic.Handlers
 {
     public class OmdbHandler
     {
-        Uri RequestUri = new Uri(@"http://www.omdbapi.com/?apikey=694f1bcb");
-        private HttpClient _client;
+        private readonly Uri RequestUri = new Uri(@"http://www.omdbapi.com/?apikey=694f1bcb");
+        private readonly HttpClient _client;
 
         public OmdbHandler(HttpClient client)
         {

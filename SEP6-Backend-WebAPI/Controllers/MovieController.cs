@@ -14,11 +14,13 @@ namespace SEP6_Backend_WebAPI.Controllers
     {
         private readonly MovieHandler _movieHandler;
         private readonly OmdbHandler _obmHandler;
+        private readonly TmdbHandler _tmdbHandler;
 
         public MovieController(IDaFactory daFactory)
         {
             _movieHandler = new MovieHandler(daFactory.MoviesRepository());
             _obmHandler = new OmdbHandler(new System.Net.Http.HttpClient());
+            _tmdbHandler = new TmdbHandler(new System.Net.Http.HttpClient());
         }
 
         [HttpGet]
@@ -58,6 +60,14 @@ namespace SEP6_Backend_WebAPI.Controllers
                 }
             }
 
+            return MovieList;
+        }
+
+        [HttpGet]
+        [Route("discovery/popularity")]
+        public TmdbMovie.Root GetMostPopularMovies()
+        {
+            var MovieList = _tmdbHandler.GetMostPopularMovies().Result;
             return MovieList;
         }
     }
