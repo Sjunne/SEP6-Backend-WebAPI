@@ -28,14 +28,23 @@ namespace SEP6_Backend_WebAPI.Controllers
             var actorList = _actorHandler.GetActorsByKeyword(keyword);
             return actorList;
         }
-        /*
+        
         [HttpGet]
         [Route("search/{keyword}")]
         public List<FullPerson> GetAllBySearch([FromRoute] string keyword)
         {
-            var fullPersonList = _tmdbHandler.SearchPersonByName(keyword);
+            var fullPersonList = _tmdbHandler.SearchPersonByName(keyword).Result;
             return fullPersonList;
         }
-        */
+
+        [HttpGet]
+        [Route("searchpersonbyid/{id}")]
+        public PersonDetail GetPersonById([FromRoute] string id)
+        {
+            var p = _tmdbHandler.SearchPersonById(id).Result;
+            Console.WriteLine("hello");
+            Console.WriteLine(p.biography);
+            return p;
+        }
     }
 }
