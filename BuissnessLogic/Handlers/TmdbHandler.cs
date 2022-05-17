@@ -69,7 +69,51 @@ namespace BuissnessLogic.Handlers
                 throw new Exception("No access to external API");
             }
         }
-       
+
+        public async Task<TmdbMovie.Root> GetUpcommingMovies()
+        {
+            var url = "https://api.themoviedb.org/3/movie/upcoming?api_key=bc2e8af508f762ff45464b05dcf68cbd&language=en-US&page=1";
+            var responds = SendRequest(url);
+            if (responds.IsSuccessStatusCode)
+            {
+                var content = await responds.Content.ReadAsStringAsync();
+                return JsonConvert.DeserializeObject<TmdbMovie.Root>(content);
+            }
+            else
+            {
+                throw new Exception("No access to external API");
+            }
+        }
+
+        public async Task<TmdbMovie.Root> GetInTheathersMovies()
+        {
+            var url = "https://api.themoviedb.org/3/movie/now_playing?api_key=bc2e8af508f762ff45464b05dcf68cbd&language=en-US&page=1";
+            var responds = SendRequest(url);
+            if (responds.IsSuccessStatusCode)
+            {
+                var content = await responds.Content.ReadAsStringAsync();
+                return JsonConvert.DeserializeObject<TmdbMovie.Root>(content);
+            }
+            else
+            {
+                throw new Exception("No access to external API");
+            }
+        }
+
+        public async Task<RootSeries> GetMostPopularSeries()
+        {
+            var url = "https://api.themoviedb.org/3/tv/popular?api_key=bc2e8af508f762ff45464b05dcf68cbd&language=en-US&page=1";
+            var responds = SendRequest(url);
+            if (responds.IsSuccessStatusCode)
+            {
+                var content = await responds.Content.ReadAsStringAsync();
+                return JsonConvert.DeserializeObject<RootSeries>(content);
+            }
+            else
+            {
+                throw new Exception("No access to external API");
+            }
+        }
 
     }
 }

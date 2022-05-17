@@ -70,5 +70,32 @@ namespace SEP6_Backend_WebAPI.Controllers
             var MovieList = _tmdbHandler.GetMostPopularMovies().Result;
             return MovieList;
         }
+
+        [HttpGet]
+        [Route("discovery/upcomming")]
+        public TmdbMovie.Root GetUpcmmingMovies()
+        {
+            var MovieList = _tmdbHandler.GetUpcommingMovies().Result;
+            return MovieList;
+        }
+
+        [HttpGet]
+        [Route("discovery/theaters")]
+        public TmdbMovie.Root GetInTheatersMovies()
+        {
+            var MovieList = _tmdbHandler.GetInTheathersMovies().Result;
+            return MovieList;
+        }
+
+
+        [HttpGet]
+        [Route("discovery/seriespopular")]
+        public RootSeries GetMostPopularSeries()
+        {
+            var MovieList = _tmdbHandler.GetMostPopularSeries().Result;
+            return MovieList;
+        }
+
+
     }
 }
