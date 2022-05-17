@@ -42,8 +42,7 @@ namespace SEP6_Backend_WebAPI.Controllers
         public PersonDetail GetPersonById([FromRoute] string id)
         {
             var p = _tmdbHandler.SearchPersonById(id).Result;
-            Console.WriteLine("hello");
-            Console.WriteLine(p.biography);
+          
             return p;
         }
     }

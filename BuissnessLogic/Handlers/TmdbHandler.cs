@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using DataAccess.Actors;
 using Newtonsoft.Json.Linq;
+using DataAccess.Movies;
 
 namespace BuissnessLogic.Handlers
 {
@@ -15,12 +16,12 @@ namespace BuissnessLogic.Handlers
         Uri RequestUri =
             new Uri(
                 @"https://api.themoviedb.org/3/search/person?api_key=bc2e8af508f762ff45464b05dcf68cbd&language=en-US&query=");
-
         public Uri Person = new Uri(@"https://api.themoviedb.org/3/person/");
-        public string PersonId = @"?api_key=bc2e8af508f762ff45464b05dcf68cbd&language=en-US";
-
+        private readonly Uri discoverUri = new Uri(@"https://api.themoviedb.org/3/discover/movie?api_key=bc2e8af508f762ff45464b05dcf68cbd&language=en-US");
         string append =
             "&page=1&include_adult=false";
+
+        private string PersonId = "?api_key=bc2e8af508f762ff45464b05dcf68cbd&language=en-US";
 
         private string imageurl = "https://image.tmdb.org/t/p/w200";
 
@@ -43,9 +44,7 @@ namespace BuissnessLogic.Handlers
                     .ToObject<List<FullPerson>>();
                 var result = TransformPersonList(seriesCollection);
                 return result;
-                
-               // return JsonConvert.DeserializeObject<List<ResponseSearchPeople>>(content);
-
+                // return JsonConvert.DeserializeObject<List<ResponseSearchPeople>>(content);
             }
             else
             {
@@ -81,7 +80,7 @@ namespace BuissnessLogic.Handlers
 
             return _client.SendAsync(request).Result;
         }
-        
+
         public List<FullPerson> TransformPersonList(List<FullPerson> list)
        {
            foreach (var person in list)
@@ -103,6 +102,20 @@ namespace BuissnessLogic.Handlers
                 } 
             }
             return pd;
+        }
+        public async Task<TmdbMovie.Root> GetMostPopularMovies()
+        {
+            var url = discoverUri + "&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_watch_monetization_types=flatrate";
+            var responds = SendRequest(url);
+            if (responds.IsSuccessStatusCode)
+            {
+                var content = await responds.Content.ReadAsStringAsync();
+                return JsonConvert.DeserializeObject<TmdbMovie.Root>(content);
+            }
+            else
+            {
+                throw new Exception("No access to external API");
+            }
         }
     }
 }

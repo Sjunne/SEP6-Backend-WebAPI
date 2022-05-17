@@ -59,8 +59,8 @@
         <option value="$PROJECT_DIR$/DataAccess/Factories/IDaFactory.cs" />
         <option value="$PROJECT_DIR$/DataAccess/Factories/DaFactory.cs" />
         <option value="$PROJECT_DIR$/DataAccess/Actors/Repository.cs" />
-        <option value="$PROJECT_DIR$/SEP6-Backend-WebAPI/Controllers/ActorController.cs" />
         <option value="$PROJECT_DIR$/BuissnessLogic/Handlers/TmdbHandler.cs" />
+        <option value="$PROJECT_DIR$/SEP6-Backend-WebAPI/Controllers/ActorController.cs" />
       </list>
     </option>
   </component>
@@ -123,7 +123,7 @@
       <workItem from="1651831256491" duration="742000" />
       <workItem from="1652084219564" duration="3951000" />
       <workItem from="1652182140830" duration="19252000" />
-      <workItem from="1652688275371" duration="10735000" />
+      <workItem from="1652688275371" duration="11744000" />
     </task>
     <servers />
   </component>
@@ -148,22 +148,22 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1323" height="72" key="GridCell.Tab.0.bottom" timestamp="1652771248109">
+    <state width="1323" height="189" key="GridCell.Tab.0.bottom" timestamp="1652772959951">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="72" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1652771248109" />
-    <state width="1323" height="72" key="GridCell.Tab.0.center" timestamp="1652771248109">
+    <state width="1323" height="189" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1652772959951" />
+    <state width="1323" height="189" key="GridCell.Tab.0.center" timestamp="1652772959948">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="72" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1652771248109" />
-    <state width="1323" height="72" key="GridCell.Tab.0.left" timestamp="1652771248108">
+    <state width="1323" height="189" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1652772959948" />
+    <state width="1323" height="189" key="GridCell.Tab.0.left" timestamp="1652772959944">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="72" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1652771248108" />
-    <state width="1323" height="72" key="GridCell.Tab.0.right" timestamp="1652771248109">
+    <state width="1323" height="189" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1652772959944" />
+    <state width="1323" height="189" key="GridCell.Tab.0.right" timestamp="1652772959949">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="72" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1652771248109" />
+    <state width="1323" height="189" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1652772959949" />
     <state width="1306" height="247" key="GridCell.Tab.1.bottom" timestamp="1652268720831">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -244,5 +244,9 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1652726687065" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1652773050999">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1652773050999" />
   </component>
 </project>
