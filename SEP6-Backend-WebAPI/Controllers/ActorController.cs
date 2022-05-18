@@ -45,5 +45,14 @@ namespace SEP6_Backend_WebAPI.Controllers
           
             return p;
         }
+        
+        [HttpGet]
+        [Route("fullcredits/{id}")]
+        public List<Cast> FullCredits([FromRoute] string id)
+        {
+            var p = _tmdbHandler.GetFullCreditAsCast(id);
+            Console.WriteLine(p.Count);
+            return p;
+        }
     }
 }
