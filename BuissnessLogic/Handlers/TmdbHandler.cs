@@ -278,13 +278,29 @@ namespace BuissnessLogic.Handlers
                 var content = await responds.Content.ReadAsStringAsync();
                 var seriesCollection = JObject.Parse(content)["results"]
                     .ToObject<List<FullPerson>>();
-                var result = TransformPersonList(seriesCollection);
+                var result = TransformPopularActorsList(seriesCollection);
                 return result;
             }
             else
             {
                 throw new Exception("No access to external API");
             }
+        }
+        
+        public List<FullPerson> TransformPopularActorsList(List<FullPerson> list)
+        {
+            List<FullPerson> l = new List<FullPerson>();
+            foreach (var person in list)
+            {
+                if (person.profile_path != null)
+                {
+                    person.profile_path = "https://image.tmdb.org/t/p/w200" + person.profile_path;
+                    l.Add(person);
+                }
+               
+            }
+
+            return l;
         }
     }
 }
