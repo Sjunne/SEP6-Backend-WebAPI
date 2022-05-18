@@ -54,5 +54,13 @@ namespace SEP6_Backend_WebAPI.Controllers
             Console.WriteLine(p.Count);
             return p;
         }
+        
+        [HttpGet]
+        [Route("people/popular")]
+        public List<FullPerson> GetPopularActors()
+        {
+            var p = _tmdbHandler.GetPopularActors().Result;
+            return p;
+        }
     }
 }

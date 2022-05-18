@@ -16,6 +16,7 @@ namespace BuissnessLogic.Handlers
     public class TmdbHandler
     {
         Uri credits = new Uri(@"https://api.themoviedb.org/3/person/");
+        Uri popularActors = new Uri(@"https://api.themoviedb.org/3/person/popular?api_key=bc2e8af508f762ff45464b05dcf68cbd&language=en-US&page=1");
 
         Uri RequestUri =
             new Uri(
@@ -261,6 +262,24 @@ namespace BuissnessLogic.Handlers
                 var seriesCollection = JObject.Parse(content)["combined_credits"]
                     .ToObject<CombinedCredits>();
                 return seriesCollection;
+            }
+            else
+            {
+                throw new Exception("No access to external API");
+            }
+        }
+
+        public async Task<List<FullPerson>> GetPopularActors()
+        {
+            var responds = SendRequest(popularActors.ToString());
+
+            if (responds.IsSuccessStatusCode)
+            {
+                var content = await responds.Content.ReadAsStringAsync();
+                var seriesCollection = JObject.Parse(content)["results"]
+                    .ToObject<List<FullPerson>>();
+                var result = TransformPersonList(seriesCollection);
+                return result;
             }
             else
             {
