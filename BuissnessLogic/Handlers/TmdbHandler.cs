@@ -160,7 +160,12 @@ namespace BuissnessLogic.Handlers
             if (responds.IsSuccessStatusCode)
             {
                 var content = await responds.Content.ReadAsStringAsync();
-                return JsonConvert.DeserializeObject<TmdbMovie.Root>(content);
+                var root = JsonConvert.DeserializeObject<TmdbMovie.Root>(content);
+                foreach (var movie in root.results)
+                {
+                    movie.imdb_id = GetTransformedImdb(movie.id);
+                }
+                return root;
             }
             else
             {
@@ -175,7 +180,12 @@ namespace BuissnessLogic.Handlers
             if (responds.IsSuccessStatusCode)
             {
                 var content = await responds.Content.ReadAsStringAsync();
-                return JsonConvert.DeserializeObject<TmdbMovie.Root>(content);
+                var root = JsonConvert.DeserializeObject<TmdbMovie.Root>(content);
+                foreach (var movie in root.results)
+                {
+                    movie.imdb_id = GetTransformedImdb(movie.id);
+                }
+                return root;
             }
             else
             {
@@ -230,7 +240,39 @@ namespace BuissnessLogic.Handlers
                 {
                     var movie = cast[j];
                     cast[j].title = movie.original_title + " (" + movie.release_date.Split("-")[0] + ")";
+                    cast[j].imdb_id = GetTransformedImdb(cast[j].id);
                     c.Add(cast[j]);
+                }
+            }
+            double sum = 0.0;
+
+            foreach (var movie in c)
+            {
+                var imdb = GetImdbId(movie.id).Result.imdb_id;
+                if (imdb != null)
+                {
+                    sum += movie.vote_average;
+                    movie.imdb_id = imdb.Split("t")[2];
+                    
+                }
+            }
+            var ca = c.OrderBy(x => x.release_date).ToList();
+            var median = sum / c.Count;
+            ca[0].median = Math.Round(median, 1);
+            return ca;
+        }
+        
+        private List<Crew> CrewOrderByYear(List<Crew> crew)
+        {
+            List<Crew> c = new List<Crew>();
+            for (int j = 0; j < crew.Count; j++)
+            {
+                if (!string.IsNullOrEmpty(crew[j].release_date) && !string.IsNullOrEmpty(crew[j].poster_path))
+                {
+                    var movie = crew[j];
+                    crew[j].title = movie.original_title + " (" + movie.release_date.Split("-")[0] + ")";
+                    crew[j].imdb_id = GetTransformedImdb(crew[j].id);
+                    c.Add(crew[j]);
                 }
             }
             double sum = 0.0;
@@ -301,6 +343,26 @@ namespace BuissnessLogic.Handlers
             }
 
             return l;
+        }
+
+        public List<Crew> GetFullCreditAsCrew(string id)
+        {
+            var combined = GetFullCredits(id).Result;
+            var c =  CrewOrderByYear(combined.crew);
+            return c;
+        }
+
+        public string GetTransformedImdb(int id)
+        {
+            var imdb_id = "";
+            var imdb = GetImdbId(id).Result.imdb_id;
+            if (imdb != null)
+            {
+                imdb_id = imdb.Split("t")[2];
+                    
+            }
+
+            return imdb_id;
         }
     }
 }
@@ -383,6 +445,8 @@ public class Crew
     public List<string> origin_country { get; set; }
     public string name { get; set; }
     public int? episode_count { get; set; }
+    public string imdb_id { get; set; }
+    public double median { get; set; }
 }
 
 public class ExternalIds

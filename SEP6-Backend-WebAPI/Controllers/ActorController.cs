@@ -56,6 +56,14 @@ namespace SEP6_Backend_WebAPI.Controllers
         }
         
         [HttpGet]
+        [Route("fullcredits/crew/{id}")]
+        public List<Crew> FullCreditsForCrew([FromRoute] string id)
+        {
+            var p = _tmdbHandler.GetFullCreditAsCrew(id);
+            return p;
+        }
+        
+        [HttpGet]
         [Route("people/popular")]
         public List<FullPerson> GetPopularActors()
         {

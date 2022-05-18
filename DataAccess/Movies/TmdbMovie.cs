@@ -6,7 +6,7 @@ namespace DataAccess.Movies
 {
     public class TmdbMovie
     {
-      
+        
             public bool adult { get; set; }
             public string backdrop_path { get; set; }
             public List<int> genre_ids { get; set; }
@@ -21,6 +21,7 @@ namespace DataAccess.Movies
             public bool video { get; set; }
             public double vote_average { get; set; }
             public int vote_count { get; set; }
+            public string imdb_id { get; set; }
         
 
         public class Root
