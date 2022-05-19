@@ -192,6 +192,21 @@ namespace BuissnessLogic.Handlers
                 throw new Exception("No access to external API");
             }
         }
+        
+        public async Task<ExternalIds> GetImdbIdForSeries(int id)
+        {
+            var url = i + $"{id}" + "/external_ids?api_key=bc2e8af508f762ff45464b05dcf68cbd";
+            var responds = SendRequest(url);
+            if (responds.IsSuccessStatusCode)
+            {
+                var content = await responds.Content.ReadAsStringAsync();
+                return JsonConvert.DeserializeObject<ExternalIds>(content);
+            }
+            else
+            {
+                return new ExternalIds();
+            }
+        }
 
         public async Task<TmdbMovie.Root> GetInTheathersMovies()
         {
@@ -215,12 +230,36 @@ namespace BuissnessLogic.Handlers
             if (responds.IsSuccessStatusCode)
             {
                 var content = await responds.Content.ReadAsStringAsync();
-                return JsonConvert.DeserializeObject<RootSeries>(content);
+                var root =  JsonConvert.DeserializeObject<RootSeries>(content);
+                List<TmdbSeries> series = new List<TmdbSeries>();
+                foreach (var serie in root.results)
+                {
+                    serie.imdb_db = GetSeriesImdb(serie.id);
+                    if (serie.imdb_db != "")
+                    {
+                        series.Add(serie);
+                    }
+                }
+
+                root.results = series;
+                return root;
             }
             else
             {
                 throw new Exception("No access to external API");
             }
+        }
+        
+        public string GetSeriesImdb(int id)
+        {
+            var imdb_id = "";
+            var imdb = GetImdbIdForSeries(id);
+            if (imdb.Result != null && imdb.Result.imdb_id != null && imdb.Result.imdb_id != "")
+            {
+                imdb_id = imdb.Result.imdb_id.Split("t")[2];
+            }
+
+            return imdb_id;
         }
 
         //
@@ -359,7 +398,6 @@ namespace BuissnessLogic.Handlers
             if (imdb != null)
             {
                 imdb_id = imdb.Split("t")[2];
-                    
             }
 
             return imdb_id;

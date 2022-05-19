@@ -19,6 +19,7 @@ namespace DataAccess.Movies
         public string poster_path { get; set; }
         public double vote_average { get; set; }
         public int vote_count { get; set; }
+        public string imdb_db { get; set; }
     }
 
     public class RootSeries
