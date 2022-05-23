@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using DataAccess.Actors;
+using DataAccess.Ratings;
 
 namespace DataAccess.Factories
 {
@@ -10,5 +11,7 @@ namespace DataAccess.Factories
     {
         IMovieRepository MoviesRepository();
         IActorRepository ActorRepository();
+
+        IRatingRespository RateRepository();
     }
 }

@@ -4,6 +4,7 @@ using System.Text;
 using System.Data;
 using Dapper;
 using System.Linq;
+using Dapper.Contrib.Extensions;
 
 namespace DataAccess.Movies
 {
@@ -26,7 +27,8 @@ namespace DataAccess.Movies
         {
             const string query = @"SELECT TOP(5) * FROM movies WHERE title LIKE @title + '%' 
                                     ORDER BY CASE WHEN title = @title THEN 1 ELSE 2 END";
-            return (List<MovieDa>)_connection.Query<MovieDa>(query, new { title });
+            return (List<MovieDa>) _connection.Query<MovieDa>(query, new {title});
         }
+       
     }
 }
