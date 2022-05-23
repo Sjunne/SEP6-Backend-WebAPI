@@ -5,6 +5,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Text;
 using DataAccess.Actors;
+using DataAccess.Comments;
 
 namespace DataAccess.Factories
 {
@@ -27,6 +28,10 @@ namespace DataAccess.Factories
             return new Repository(_connection);
         }
 
+        public ICommentRepository CommentRepository()
+        {
+            return new CommentRepository(_connection);
+        }
    
     }
 

@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using DataAccess.Actors;
+using DataAccess.Comments;
 
 namespace DataAccess.Factories
 {
@@ -10,5 +11,6 @@ namespace DataAccess.Factories
     {
         IMovieRepository MoviesRepository();
         IActorRepository ActorRepository();
+        ICommentRepository CommentRepository();
     }
 }
