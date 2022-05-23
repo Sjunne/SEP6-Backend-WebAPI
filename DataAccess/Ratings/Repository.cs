@@ -26,16 +26,19 @@ namespace DataAccess.Ratings
             var b = (List<Rating>)_connection.Query<Rating>(exists, new {gmail, movieid});
 
             var r = b.Count == 0;
-            if (!r)
+            if (r)
             {
-                const string insert = @"insert into dbo.rating values ( @gmail, @movieid, @rate);";
-                _connection.Insert(insert);
-                r = true;
+                const string query = @"INSERT INTO dbo.rating (gmail, movieid, rating)  OUTPUT INSERTED.* VALUES (@gmail, @movieid, @rate)";
+                var output = _connection.QuerySingle<Rating>(query, new { gmail, movieid, rate });
+                Console.WriteLine(output);
             }
             else
             {
-                const string delete = @"drop into dbo.rating values ( @gmail, @movieid, @rate);";
-                _connection.Delete();
+                const string query = @"UPDATE dbo.rating SET rating = @rate WHERE movieid = @movieid AND WHERE gmail = @gmail";
+          
+                _connection.Query<Rating>(query, new { gmail, movieid, rate});
+                var c =  _connection.Get<Rating>(gmail);
+                Console.WriteLine(c.gmail);
             }
             return r;
         }
