@@ -16,6 +16,7 @@ namespace BuissnessLogic.Handlers
     public class TmdbHandler
     {
         Uri credits = new Uri(@"https://api.themoviedb.org/3/person/");
+        Uri popularActors = new Uri(@"https://api.themoviedb.org/3/person/popular?api_key=bc2e8af508f762ff45464b05dcf68cbd&language=en-US&page=1");
 
         Uri RequestUri =
             new Uri(
@@ -159,7 +160,12 @@ namespace BuissnessLogic.Handlers
             if (responds.IsSuccessStatusCode)
             {
                 var content = await responds.Content.ReadAsStringAsync();
-                return JsonConvert.DeserializeObject<TmdbMovie.Root>(content);
+                var root = JsonConvert.DeserializeObject<TmdbMovie.Root>(content);
+                foreach (var movie in root.results)
+                {
+                    movie.imdb_id = GetTransformedImdb(movie.id);
+                }
+                return root;
             }
             else
             {
@@ -174,11 +180,31 @@ namespace BuissnessLogic.Handlers
             if (responds.IsSuccessStatusCode)
             {
                 var content = await responds.Content.ReadAsStringAsync();
-                return JsonConvert.DeserializeObject<TmdbMovie.Root>(content);
+                var root = JsonConvert.DeserializeObject<TmdbMovie.Root>(content);
+                foreach (var movie in root.results)
+                {
+                    movie.imdb_id = GetTransformedImdb(movie.id);
+                }
+                return root;
             }
             else
             {
                 throw new Exception("No access to external API");
+            }
+        }
+        
+        public async Task<ExternalIds> GetImdbIdForSeries(int id)
+        {
+            var url = i + $"{id}" + "/external_ids?api_key=bc2e8af508f762ff45464b05dcf68cbd";
+            var responds = SendRequest(url);
+            if (responds.IsSuccessStatusCode)
+            {
+                var content = await responds.Content.ReadAsStringAsync();
+                return JsonConvert.DeserializeObject<ExternalIds>(content);
+            }
+            else
+            {
+                return new ExternalIds();
             }
         }
 
@@ -204,12 +230,36 @@ namespace BuissnessLogic.Handlers
             if (responds.IsSuccessStatusCode)
             {
                 var content = await responds.Content.ReadAsStringAsync();
-                return JsonConvert.DeserializeObject<RootSeries>(content);
+                var root =  JsonConvert.DeserializeObject<RootSeries>(content);
+                List<TmdbSeries> series = new List<TmdbSeries>();
+                foreach (var serie in root.results)
+                {
+                    serie.imdb_db = GetSeriesImdb(serie.id);
+                    if (serie.imdb_db != "")
+                    {
+                        series.Add(serie);
+                    }
+                }
+
+                root.results = series;
+                return root;
             }
             else
             {
                 throw new Exception("No access to external API");
             }
+        }
+        
+        public string GetSeriesImdb(int id)
+        {
+            var imdb_id = "";
+            var imdb = GetImdbIdForSeries(id);
+            if (imdb.Result != null && imdb.Result.imdb_id != null && imdb.Result.imdb_id != "")
+            {
+                imdb_id = imdb.Result.imdb_id.Split("t")[2];
+            }
+
+            return imdb_id;
         }
 
         //
@@ -229,7 +279,39 @@ namespace BuissnessLogic.Handlers
                 {
                     var movie = cast[j];
                     cast[j].title = movie.original_title + " (" + movie.release_date.Split("-")[0] + ")";
+                    cast[j].imdb_id = GetTransformedImdb(cast[j].id);
                     c.Add(cast[j]);
+                }
+            }
+            double sum = 0.0;
+
+            foreach (var movie in c)
+            {
+                var imdb = GetImdbId(movie.id).Result.imdb_id;
+                if (imdb != null)
+                {
+                    sum += movie.vote_average;
+                    movie.imdb_id = imdb.Split("t")[2];
+                    
+                }
+            }
+            var ca = c.OrderBy(x => x.release_date).ToList();
+            var median = sum / c.Count;
+            ca[0].median = Math.Round(median, 1);
+            return ca;
+        }
+        
+        private List<Crew> CrewOrderByYear(List<Crew> crew)
+        {
+            List<Crew> c = new List<Crew>();
+            for (int j = 0; j < crew.Count; j++)
+            {
+                if (!string.IsNullOrEmpty(crew[j].release_date) && !string.IsNullOrEmpty(crew[j].poster_path))
+                {
+                    var movie = crew[j];
+                    crew[j].title = movie.original_title + " (" + movie.release_date.Split("-")[0] + ")";
+                    crew[j].imdb_id = GetTransformedImdb(crew[j].id);
+                    c.Add(crew[j]);
                 }
             }
             double sum = 0.0;
@@ -266,6 +348,59 @@ namespace BuissnessLogic.Handlers
             {
                 throw new Exception("No access to external API");
             }
+        }
+
+        public async Task<List<FullPerson>> GetPopularActors()
+        {
+            var responds = SendRequest(popularActors.ToString());
+
+            if (responds.IsSuccessStatusCode)
+            {
+                var content = await responds.Content.ReadAsStringAsync();
+                var seriesCollection = JObject.Parse(content)["results"]
+                    .ToObject<List<FullPerson>>();
+                var result = TransformPopularActorsList(seriesCollection);
+                return result;
+            }
+            else
+            {
+                throw new Exception("No access to external API");
+            }
+        }
+        
+        public List<FullPerson> TransformPopularActorsList(List<FullPerson> list)
+        {
+            List<FullPerson> l = new List<FullPerson>();
+            foreach (var person in list)
+            {
+                if (person.profile_path != null)
+                {
+                    person.profile_path = "https://image.tmdb.org/t/p/w200" + person.profile_path;
+                    l.Add(person);
+                }
+               
+            }
+
+            return l;
+        }
+
+        public List<Crew> GetFullCreditAsCrew(string id)
+        {
+            var combined = GetFullCredits(id).Result;
+            var c =  CrewOrderByYear(combined.crew);
+            return c;
+        }
+
+        public string GetTransformedImdb(int id)
+        {
+            var imdb_id = "";
+            var imdb = GetImdbId(id).Result.imdb_id;
+            if (imdb != null)
+            {
+                imdb_id = imdb.Split("t")[2];
+            }
+
+            return imdb_id;
         }
     }
 }
@@ -348,6 +483,8 @@ public class Crew
     public List<string> origin_country { get; set; }
     public string name { get; set; }
     public int? episode_count { get; set; }
+    public string imdb_id { get; set; }
+    public double median { get; set; }
 }
 
 public class ExternalIds

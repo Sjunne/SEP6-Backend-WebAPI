@@ -54,5 +54,21 @@ namespace SEP6_Backend_WebAPI.Controllers
             Console.WriteLine(p.Count);
             return p;
         }
+        
+        [HttpGet]
+        [Route("fullcredits/crew/{id}")]
+        public List<Crew> FullCreditsForCrew([FromRoute] string id)
+        {
+            var p = _tmdbHandler.GetFullCreditAsCrew(id);
+            return p;
+        }
+        
+        [HttpGet]
+        [Route("people/popular")]
+        public List<FullPerson> GetPopularActors()
+        {
+            var p = _tmdbHandler.GetPopularActors().Result;
+            return p;
+        }
     }
 }

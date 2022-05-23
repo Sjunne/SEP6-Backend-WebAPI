@@ -73,7 +73,7 @@ namespace SEP6_Backend_WebAPI.Controllers
 
         [HttpGet]
         [Route("discovery/upcomming")]
-        public TmdbMovie.Root GetUpcmmingMovies()
+        public TmdbMovie.Root GetUpcomingMovies()
         {
             var MovieList = _tmdbHandler.GetUpcommingMovies().Result;
             return MovieList;
