@@ -24,6 +24,7 @@
   <component name="ChangeListManager">
     <list default="true" id="503fc924-813b-48d1-b724-4917def99ecb" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SEP6-Backend-WebAPI/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SEP6-Backend-WebAPI/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SEP6-Backend-WebAPI/Controllers/CommentController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SEP6-Backend-WebAPI/Controllers/CommentController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,6 +60,7 @@
         <option value="$PROJECT_DIR$/DataAccess/Movies/tmdbSeries.cs" />
         <option value="$PROJECT_DIR$/BuissnessLogic/Handlers/TmdbHandler.cs" />
         <option value="$PROJECT_DIR$/.github/workflows/build.yml" />
+        <option value="$PROJECT_DIR$/SEP6-Backend-WebAPI/Controllers/CommentController.cs" />
       </list>
     </option>
   </component>
