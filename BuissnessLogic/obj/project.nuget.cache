@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "uMWK0j6axpQ79XRQUP86Re9+60tH5WqnoA/Dg8HRfGJsyeAHbUT4m/5ONyec36TANAXd7d/2W5/OParFlI9aBA==",
+  "dgSpecHash": "oI4QLUJCPImrgBLbQQAzk/JRzgOQJs9U5C/Kqn1XVkldpcbaqaENPb7d1YMUtLcjza5HSbBGhQzkcOoPf3HXPQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Sjunn\\Source\\Repos\\Sjunne\\SEP6-Backend-WebAPI\\BuissnessLogic\\BuissnessLogic.csproj",
+  "projectFilePath": "C:\\Users\\Sjunn\\source\\repos\\Sjunne\\SEP6-Backend-WebAPI\\BuissnessLogic\\BuissnessLogic.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Sjunn\\.nuget\\packages\\dapper\\2.0.123\\dapper.2.0.123.nupkg.sha512",
     "C:\\Users\\Sjunn\\.nuget\\packages\\dapper.contrib\\2.0.78\\dapper.contrib.2.0.78.nupkg.sha512",

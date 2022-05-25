@@ -8,5 +8,8 @@ namespace DataAccess.Movies
     {
         MovieDa GetMovieByTitle(string title);
         List<MovieDa> GetMoviesAndImagesByTitle(string title);
+        FavoriteMovieModel SetFavorite(FavoriteMovieModel model);
+        FavoriteMovieModel CheckFavorite(string email, string id);
+        List<FavoriteMovieModel> GetAllFavorites(string userProfile);
     }
 }

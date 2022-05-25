@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Sjunn\\Source\\Repos\\Sjunne\\SEP6-Backend-WebAPI\\DataAccess\\DataAccess.csproj": {}
+    "C:\\Users\\Sjunn\\source\\repos\\Sjunne\\SEP6-Backend-WebAPI\\DataAccess\\DataAccess.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Sjunn\\Source\\Repos\\Sjunne\\SEP6-Backend-WebAPI\\DataAccess\\DataAccess.csproj": {
+    "C:\\Users\\Sjunn\\source\\repos\\Sjunne\\SEP6-Backend-WebAPI\\DataAccess\\DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Sjunn\\Source\\Repos\\Sjunne\\SEP6-Backend-WebAPI\\DataAccess\\DataAccess.csproj",
+        "projectUniqueName": "C:\\Users\\Sjunn\\source\\repos\\Sjunne\\SEP6-Backend-WebAPI\\DataAccess\\DataAccess.csproj",
         "projectName": "DataAccess",
-        "projectPath": "C:\\Users\\Sjunn\\Source\\Repos\\Sjunne\\SEP6-Backend-WebAPI\\DataAccess\\DataAccess.csproj",
+        "projectPath": "C:\\Users\\Sjunn\\source\\repos\\Sjunne\\SEP6-Backend-WebAPI\\DataAccess\\DataAccess.csproj",
         "packagesPath": "C:\\Users\\Sjunn\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Sjunn\\Source\\Repos\\Sjunne\\SEP6-Backend-WebAPI\\DataAccess\\obj\\",
+        "outputPath": "C:\\Users\\Sjunn\\source\\repos\\Sjunne\\SEP6-Backend-WebAPI\\DataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Sjunn\\AppData\\Roaming\\NuGet\\NuGet.Config",

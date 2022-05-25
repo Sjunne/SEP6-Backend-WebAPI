@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "GxCO7Lh10zoPZnDT2fD8rdwPylNwWLCnkeK3ynFwY4OOo/gmo87DUeMNg4wO2oh7Doe5/jxyl95XEaRcDQDV3Q==",
+  "dgSpecHash": "hM05U2UNYdlp27lCnK6M8n+wwWqFzNyxYpm+sHqKE3QIHhRurST7reOnokI8I/PAnTAE3xMaNJWm/R/pELHUaw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Sjunn\\Source\\Repos\\Sjunne\\SEP6-Backend-WebAPI\\SEP6-Backend-WebAPI\\SEP6-Backend-WebAPI.csproj",
+  "projectFilePath": "C:\\Users\\Sjunn\\source\\repos\\Sjunne\\SEP6-Backend-WebAPI\\SEP6-Backend-WebAPI\\SEP6-Backend-WebAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Sjunn\\.nuget\\packages\\dapper\\2.0.123\\dapper.2.0.123.nupkg.sha512",
     "C:\\Users\\Sjunn\\.nuget\\packages\\dapper.contrib\\2.0.78\\dapper.contrib.2.0.78.nupkg.sha512",

@@ -1,4 +1,5 @@
 ﻿using BuissnessLogic.Handlers;
+using DataAccess.Comments;
 using DataAccess.Factories;
 using DataAccess.Movies;
 using Microsoft.AspNetCore.Cors;
@@ -63,11 +64,28 @@ namespace SEP6_Backend_WebAPI.Controllers
             return MovieList;
         }
 
+
+        [HttpGet]
+        [Route("checkFavorite/{email}/{id}")]
+        public FavoriteMovieModel CheckFavorite([FromRoute] string email, [FromRoute] string id)
+        {
+            FavoriteMovieModel model = _movieHandler.CheckFavorite(email, id);
+            return model;
+        }
+
         [HttpGet]
         [Route("discovery/popularity")]
         public TmdbMovie.Root GetMostPopularMovies()
         {
             var MovieList = _tmdbHandler.GetMostPopularMovies().Result;
+            return MovieList;
+        }
+
+        [HttpGet]
+        [Route("getFavorites/{userProfile}")]
+        public List<FavoriteMovieModel> GetAllFavorites([FromRoute] string userProfile)
+        {
+            List<FavoriteMovieModel> MovieList = _movieHandler.GetAllFavorites(userProfile);
             return MovieList;
         }
 
@@ -96,6 +114,11 @@ namespace SEP6_Backend_WebAPI.Controllers
             return MovieList;
         }
 
-
+        [HttpPost]
+        [Route("setFavorite")]
+        public FavoriteMovieModel SetFavorite(FavoriteMovieModel model)
+        {
+           return _movieHandler.SetFavorite(model);
+        }
     }
 }
