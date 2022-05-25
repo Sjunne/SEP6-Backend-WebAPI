@@ -35,7 +35,7 @@ jobs:
           # The build configuration to use (defaults to 'Release').
           build-configuration: Release
           # The path to the project or solution to build (defaults to the current directory).
-          path: ../BuissnessLogic/BuissnessLogic.csproj
+          path: ./BuissnessLogic/BuissnessLogic.csproj
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
