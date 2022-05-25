@@ -45,6 +45,8 @@ namespace SEP6_Backend_WebAPI.Controllers
         public void DeleteComment(string id)
         {
             _commentHandler.DeleteComment(id);
+
+            int i = 0;
         }
 
     }
