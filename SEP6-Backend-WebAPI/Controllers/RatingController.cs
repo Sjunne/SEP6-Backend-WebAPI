@@ -25,10 +25,32 @@ namespace SEP6_Backend_WebAPI.Controllers
 
         [HttpPost]
         [Route("rating")]
-        public bool Rating([FromRoute] Rating rating)
+        public void Rating(Rating rating)
         {
-            bool b = _handler.Rate(rating);
+             _handler.Rate(rating);
+        }
+        
+        [HttpGet]
+        [Route("getrating/{info}")]
+        public int GetRating([FromRoute] string info)
+        {
+            var b = _handler.GetRating(info);
             return b;
+        }
+
+        [HttpGet]
+        [Route("averagerating/{movieid}")]
+        public double AverageRating([FromRoute] string movieid)
+        {
+            double b = _handler.AverageRating(movieid);
+            return b;
+        }
+        
+        [HttpDelete]
+        [Route("deleterating/{id}")]
+        public void DeleteRating(string id)
+        {
+            _handler.DeleteRating(id);
         }
     }
 }

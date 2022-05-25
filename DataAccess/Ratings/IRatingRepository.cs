@@ -6,6 +6,9 @@ namespace DataAccess.Ratings
 {
     public interface IRatingRespository
     {
-        bool Rate(Rating rating);
+        void Rate(Rating rating);
+        int GetRating(string info);
+        double AverageRating(string movieid);
+        void DeleteRating(string id);
     }
 }
