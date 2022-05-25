@@ -119,6 +119,7 @@ namespace SEP6_Backend_WebAPI.Controllers
         public FavoriteMovieModel SetFavorite(FavoriteMovieModel model)
         {
            return _movieHandler.SetFavorite(model);
+            //test webhook
         }
     }
 }
