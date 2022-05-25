@@ -31,11 +31,11 @@ jobs:
         uses: EasyDesk/action-dotnet-build@v1.0.0
         with:
           # Additional build arguments to pass to 'dotnet build'.
-          build-args: dotnet build
+          build-args: --no-restore
           # The build configuration to use (defaults to 'Release').
           build-configuration: Release
           # The path to the project or solution to build (defaults to the current directory).
-          path: BuissnessLogic
+          path: .
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
