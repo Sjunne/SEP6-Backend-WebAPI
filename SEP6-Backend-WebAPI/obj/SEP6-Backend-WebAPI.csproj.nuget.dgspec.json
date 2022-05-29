@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Bruger\\RiderProjects\\SEP6-Backend-WebAPI\\SEP6-Backend-WebAPI\\SEP6-Backend-WebAPI.csproj": {}
+    "C:\\Users\\Sjunn\\Source\\Repos\\Sjunne\\SEP6-Backend-WebAPI\\SEP6-Backend-WebAPI\\SEP6-Backend-WebAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Bruger\\RiderProjects\\SEP6-Backend-WebAPI\\BuissnessLogic\\BuissnessLogic.csproj": {
+    "C:\\Users\\Sjunn\\Source\\Repos\\Sjunne\\SEP6-Backend-WebAPI\\BuissnessLogic\\BuissnessLogic.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Bruger\\RiderProjects\\SEP6-Backend-WebAPI\\BuissnessLogic\\BuissnessLogic.csproj",
+        "projectUniqueName": "C:\\Users\\Sjunn\\Source\\Repos\\Sjunne\\SEP6-Backend-WebAPI\\BuissnessLogic\\BuissnessLogic.csproj",
         "projectName": "BuissnessLogic",
-        "projectPath": "C:\\Users\\Bruger\\RiderProjects\\SEP6-Backend-WebAPI\\BuissnessLogic\\BuissnessLogic.csproj",
-        "packagesPath": "C:\\Users\\Bruger\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Bruger\\RiderProjects\\SEP6-Backend-WebAPI\\BuissnessLogic\\obj\\",
+        "projectPath": "C:\\Users\\Sjunn\\Source\\Repos\\Sjunne\\SEP6-Backend-WebAPI\\BuissnessLogic\\BuissnessLogic.csproj",
+        "packagesPath": "C:\\Users\\Sjunn\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Sjunn\\Source\\Repos\\Sjunne\\SEP6-Backend-WebAPI\\BuissnessLogic\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Bruger\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Sjunn\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,8 +28,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\Bruger\\RiderProjects\\SEP6-Backend-WebAPI\\DataAccess\\DataAccess.csproj": {
-                "projectPath": "C:\\Users\\Bruger\\RiderProjects\\SEP6-Backend-WebAPI\\DataAccess\\DataAccess.csproj"
+              "C:\\Users\\Sjunn\\Source\\Repos\\Sjunne\\SEP6-Backend-WebAPI\\DataAccess\\DataAccess.csproj": {
+                "projectPath": "C:\\Users\\Sjunn\\Source\\Repos\\Sjunne\\SEP6-Backend-WebAPI\\DataAccess\\DataAccess.csproj"
               }
             }
           }
@@ -59,32 +59,26 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[3.1.10, 3.1.10]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Bruger\\RiderProjects\\SEP6-Backend-WebAPI\\DataAccess\\DataAccess.csproj": {
+    "C:\\Users\\Sjunn\\Source\\Repos\\Sjunne\\SEP6-Backend-WebAPI\\DataAccess\\DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Bruger\\RiderProjects\\SEP6-Backend-WebAPI\\DataAccess\\DataAccess.csproj",
+        "projectUniqueName": "C:\\Users\\Sjunn\\Source\\Repos\\Sjunne\\SEP6-Backend-WebAPI\\DataAccess\\DataAccess.csproj",
         "projectName": "DataAccess",
-        "projectPath": "C:\\Users\\Bruger\\RiderProjects\\SEP6-Backend-WebAPI\\DataAccess\\DataAccess.csproj",
-        "packagesPath": "C:\\Users\\Bruger\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Bruger\\RiderProjects\\SEP6-Backend-WebAPI\\DataAccess\\obj\\",
+        "projectPath": "C:\\Users\\Sjunn\\Source\\Repos\\Sjunne\\SEP6-Backend-WebAPI\\DataAccess\\DataAccess.csproj",
+        "packagesPath": "C:\\Users\\Sjunn\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Sjunn\\Source\\Repos\\Sjunne\\SEP6-Backend-WebAPI\\DataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Bruger\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Sjunn\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -133,32 +127,26 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[3.1.10, 3.1.10]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Bruger\\RiderProjects\\SEP6-Backend-WebAPI\\SEP6-Backend-WebAPI\\SEP6-Backend-WebAPI.csproj": {
+    "C:\\Users\\Sjunn\\Source\\Repos\\Sjunne\\SEP6-Backend-WebAPI\\SEP6-Backend-WebAPI\\SEP6-Backend-WebAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Bruger\\RiderProjects\\SEP6-Backend-WebAPI\\SEP6-Backend-WebAPI\\SEP6-Backend-WebAPI.csproj",
+        "projectUniqueName": "C:\\Users\\Sjunn\\Source\\Repos\\Sjunne\\SEP6-Backend-WebAPI\\SEP6-Backend-WebAPI\\SEP6-Backend-WebAPI.csproj",
         "projectName": "SEP6-Backend-WebAPI",
-        "projectPath": "C:\\Users\\Bruger\\RiderProjects\\SEP6-Backend-WebAPI\\SEP6-Backend-WebAPI\\SEP6-Backend-WebAPI.csproj",
-        "packagesPath": "C:\\Users\\Bruger\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Bruger\\RiderProjects\\SEP6-Backend-WebAPI\\SEP6-Backend-WebAPI\\obj\\",
+        "projectPath": "C:\\Users\\Sjunn\\Source\\Repos\\Sjunne\\SEP6-Backend-WebAPI\\SEP6-Backend-WebAPI\\SEP6-Backend-WebAPI.csproj",
+        "packagesPath": "C:\\Users\\Sjunn\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Sjunn\\Source\\Repos\\Sjunne\\SEP6-Backend-WebAPI\\SEP6-Backend-WebAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Bruger\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Sjunn\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -172,11 +160,11 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\Bruger\\RiderProjects\\SEP6-Backend-WebAPI\\BuissnessLogic\\BuissnessLogic.csproj": {
-                "projectPath": "C:\\Users\\Bruger\\RiderProjects\\SEP6-Backend-WebAPI\\BuissnessLogic\\BuissnessLogic.csproj"
+              "C:\\Users\\Sjunn\\Source\\Repos\\Sjunne\\SEP6-Backend-WebAPI\\BuissnessLogic\\BuissnessLogic.csproj": {
+                "projectPath": "C:\\Users\\Sjunn\\Source\\Repos\\Sjunne\\SEP6-Backend-WebAPI\\BuissnessLogic\\BuissnessLogic.csproj"
               },
-              "C:\\Users\\Bruger\\RiderProjects\\SEP6-Backend-WebAPI\\DataAccess\\DataAccess.csproj": {
-                "projectPath": "C:\\Users\\Bruger\\RiderProjects\\SEP6-Backend-WebAPI\\DataAccess\\DataAccess.csproj"
+              "C:\\Users\\Sjunn\\Source\\Repos\\Sjunne\\SEP6-Backend-WebAPI\\DataAccess\\DataAccess.csproj": {
+                "projectPath": "C:\\Users\\Sjunn\\Source\\Repos\\Sjunne\\SEP6-Backend-WebAPI\\DataAccess\\DataAccess.csproj"
               }
             }
           }
@@ -214,16 +202,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[3.1.10, 3.1.10]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[3.1.22, 3.1.22]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -232,7 +210,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }

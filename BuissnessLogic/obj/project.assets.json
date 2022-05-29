@@ -785,11 +785,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Sjunn\\source\\repos\\Sjunne\\SEP6-Backend-WebAPI\\BuissnessLogic\\BuissnessLogic.csproj",
+      "projectUniqueName": "C:\\Users\\Sjunn\\Source\\Repos\\Sjunne\\SEP6-Backend-WebAPI\\BuissnessLogic\\BuissnessLogic.csproj",
       "projectName": "BuissnessLogic",
-      "projectPath": "C:\\Users\\Sjunn\\source\\repos\\Sjunne\\SEP6-Backend-WebAPI\\BuissnessLogic\\BuissnessLogic.csproj",
+      "projectPath": "C:\\Users\\Sjunn\\Source\\Repos\\Sjunne\\SEP6-Backend-WebAPI\\BuissnessLogic\\BuissnessLogic.csproj",
       "packagesPath": "C:\\Users\\Sjunn\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Sjunn\\source\\repos\\Sjunne\\SEP6-Backend-WebAPI\\BuissnessLogic\\obj\\",
+      "outputPath": "C:\\Users\\Sjunn\\Source\\Repos\\Sjunne\\SEP6-Backend-WebAPI\\BuissnessLogic\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Sjunn\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -806,8 +806,8 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\Sjunn\\source\\repos\\Sjunne\\SEP6-Backend-WebAPI\\DataAccess\\DataAccess.csproj": {
-              "projectPath": "C:\\Users\\Sjunn\\source\\repos\\Sjunne\\SEP6-Backend-WebAPI\\DataAccess\\DataAccess.csproj"
+            "C:\\Users\\Sjunn\\Source\\Repos\\Sjunne\\SEP6-Backend-WebAPI\\DataAccess\\DataAccess.csproj": {
+              "projectPath": "C:\\Users\\Sjunn\\Source\\Repos\\Sjunne\\SEP6-Backend-WebAPI\\DataAccess\\DataAccess.csproj"
             }
           }
         }
