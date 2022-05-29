@@ -1,3 +1,4 @@
+using BuissnessLogic.Handlers;
 using DataAccess.Factories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -30,6 +31,8 @@ namespace SEP6_Backend_WebAPI
             var appSettings = Configuration.GetSection("AppSettings").Get<AppSettings>();
             var daFactory = new DaFactory(appSettings.DatabaseConnectionStringLocal);
             services.AddSingleton<IDaFactory>(daFactory);
+            services.AddHttpClient<IOmdbHandler, OmdbHandler>();
+            services.AddHttpClient<ITmdbHandler, TmdbHandler>();
             services.AddControllers();
             services.AddSwaggerGen(options =>
             {

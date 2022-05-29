@@ -12,11 +12,9 @@ namespace SEP6_Backend_WebAPI.Controllers
     {
         private readonly CommentHandler _commentHandler;
 
-
         public CommentController(IDaFactory daFactory)
         {
             _commentHandler = new CommentHandler(daFactory.CommentRepository());
-            
         }
 
        [HttpPost]
@@ -46,6 +44,5 @@ namespace SEP6_Backend_WebAPI.Controllers
         {
             _commentHandler.DeleteComment(id);
         }
-
     }
 }

@@ -13,7 +13,7 @@ using DataAccess.Movies;
 
 namespace BuissnessLogic.Handlers
 {
-    public class TmdbHandler
+    public class TmdbHandler : ITmdbHandler
     {
         Uri credits = new Uri(@"https://api.themoviedb.org/3/person/");
         Uri popularActors = new Uri(@"https://api.themoviedb.org/3/person/popular?api_key=bc2e8af508f762ff45464b05dcf68cbd&language=en-US&page=1");

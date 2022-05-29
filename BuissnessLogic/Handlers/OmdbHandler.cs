@@ -12,7 +12,7 @@ using Newtonsoft.Json.Linq;
 
 namespace BuissnessLogic.Handlers
 {
-    public class OmdbHandler
+    public class OmdbHandler: IOmdbHandler
     {
         private readonly Uri RequestUri = new Uri(@"http://www.omdbapi.com/?apikey=694f1bcb");
         private readonly HttpClient _client;
@@ -21,7 +21,6 @@ namespace BuissnessLogic.Handlers
         {
             _client = client;
         }
-
 
         public async Task<PosterOnlyObject> GetPosterByIDAsync(string Id)
         {
