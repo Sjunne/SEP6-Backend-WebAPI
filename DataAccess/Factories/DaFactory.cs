@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Text;
+using DataAccess.Ratings;
 using DataAccess.Actors;
 using DataAccess.Comments;
 
@@ -34,14 +35,17 @@ namespace DataAccess.Factories
                 _repository = new Repository(_connection);
             return new Repository(_connection);
         }
-
+        
         public ICommentRepository CommentRepository()
         {
             if (_commentRepository == null)
                 _commentRepository = new CommentRepository(_connection);
             return new CommentRepository(_connection);
         }
-   
+        public IRatingRespository RateRepository()
+        {
+            return new RatingRepository(_connection);
+        }
     }
 
 }
