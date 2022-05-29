@@ -9,6 +9,7 @@ namespace DataAccess.Movies
         public string username { get; set; }
         public string movieId { get; set; }
         public bool favorite { get; set; }
+        public string title { get; set; }
 }
 }
 

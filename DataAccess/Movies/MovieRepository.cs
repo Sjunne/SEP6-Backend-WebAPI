@@ -53,7 +53,8 @@ namespace DataAccess.Movies
 
         List<FavoriteMovieModel> IMovieRepository.GetAllFavorites(string userProfile)
         {
-            const string query = @"SELECT * FROM favorites WHERE username = @userProfile";
+            const string query = @"SELECT [username],[movieId], [favorite], [title] FROM favorites 
+                                   INNER JOIN dbo.movies ON movieId = movies.id WHERE username = @userProfile";
             return (List<FavoriteMovieModel>)_connection.Query<FavoriteMovieModel>(query, new { userProfile });
         }
     }
