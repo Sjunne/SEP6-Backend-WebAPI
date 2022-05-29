@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
+using System.Net.Http;
 
 namespace SEP6_Backend_WebAPI.Controllers
 {
@@ -13,14 +14,14 @@ namespace SEP6_Backend_WebAPI.Controllers
     public class MovieController : ControllerBase
     {
         private readonly MovieHandler _movieHandler;
-        private readonly OmdbHandler _obmHandler;
-        private readonly TmdbHandler _tmdbHandler;
+        private readonly IOmdbHandler _omdbHandler;
+        private readonly ITmdbHandler _tmdbHandler;
 
-        public MovieController(IDaFactory daFactory)
+        public MovieController(IDaFactory daFactory, IOmdbHandler omdbClient, ITmdbHandler tmdbClient)
         {
             _movieHandler = new MovieHandler(daFactory.MoviesRepository());
-            _obmHandler = new OmdbHandler(new System.Net.Http.HttpClient());
-            _tmdbHandler = new TmdbHandler(new System.Net.Http.HttpClient());
+            _omdbHandler = omdbClient;
+            _tmdbHandler = tmdbClient;
         }
 
         [HttpGet]
@@ -34,7 +35,7 @@ namespace SEP6_Backend_WebAPI.Controllers
         [Route("full/{id}")]
         public FullMovieDa GetFullMovie([FromRoute] string id)
         {
-            return _obmHandler.GetFullMovie(id).Result;
+            return _omdbHandler.GetFullMovie(id).Result;
         }
 
         [HttpGet]
@@ -47,7 +48,7 @@ namespace SEP6_Backend_WebAPI.Controllers
             {
                 try
                 {
-                    var obmObj = _obmHandler.GetPosterByIDAsync(Movie.Id);
+                    var obmObj = _omdbHandler.GetPosterByIDAsync(Movie.Id);
                     Movie.PosterHttp = obmObj.Result.Poster;
                     Movie.Plot = obmObj.Result.Plot;
 
@@ -59,7 +60,6 @@ namespace SEP6_Backend_WebAPI.Controllers
                     //return StatusCode(150);
                 }
             }
-
             return MovieList;
         }
 

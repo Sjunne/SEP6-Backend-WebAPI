@@ -14,7 +14,6 @@ namespace SEP6_Backend_WebAPI.Controllers
     {
         private readonly ActorHandler _actorHandler;
         private readonly TmdbHandler _tmdbHandler;
-
         public ActorController(IDaFactory daFactory)
         {
             _actorHandler = new ActorHandler(daFactory.ActorRepository());
@@ -42,7 +41,6 @@ namespace SEP6_Backend_WebAPI.Controllers
         public PersonDetail GetPersonById([FromRoute] string id)
         {
             var p = _tmdbHandler.SearchPersonById(id).Result;
-          
             return p;
         }
         
@@ -51,7 +49,6 @@ namespace SEP6_Backend_WebAPI.Controllers
         public List<Cast> FullCredits([FromRoute] string id)
         {
             var p = _tmdbHandler.GetFullCreditAsCast(id);
-            Console.WriteLine(p.Count);
             return p;
         }
         
