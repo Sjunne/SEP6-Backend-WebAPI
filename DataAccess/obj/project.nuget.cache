@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "XLqAZhCashpa6ltn28bOwmwPUd6zfhlqhXYpC0YK5goW4GM82Cg+P8PtaVODxgIPKRyd2L1Dba6p2rXmyzxg6w==",
+  "dgSpecHash": "pVrglDOklDmfaNAH0aO58r194ayt431Z3uOh6K8h+fDg+seK3Ys9dw5p8QhDT4PO/9r19imNeoKZwSrDJLXjiw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Bruger\\RiderProjects\\SEP6-Backend-WebAPI\\DataAccess\\DataAccess.csproj",
+  "projectFilePath": "C:\\Users\\Sjunn\\Source\\Repos\\Sjunne\\SEP6-Backend-WebAPI\\DataAccess\\DataAccess.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Bruger\\.nuget\\packages\\dapper\\2.0.123\\dapper.2.0.123.nupkg.sha512",
     "C:\\Users\\Bruger\\.nuget\\packages\\dapper.contrib\\2.0.78\\dapper.contrib.2.0.78.nupkg.sha512",
