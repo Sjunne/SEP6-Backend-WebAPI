@@ -6,7 +6,8 @@ namespace DataAccess.Ratings
     public class Rating
     {
         public string gmail { get; set; }
-        public string movieid { get; set; }
+        [ExplicitKey]
+        public string id { get; set; }
         public int rating { get; set; }
     }
 }

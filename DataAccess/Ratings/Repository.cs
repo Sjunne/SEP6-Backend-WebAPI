@@ -21,7 +21,7 @@ namespace DataAccess.Ratings
         {
             using(var _connection2 =  new SqlConnection(_connection))
             {
-                _connection2.Execute(@"DELETE FROM sepdb.dbo.rating WHERE sepdb.dbo.rating.movieid = @id AND sepdb.dbo.rating.gmail = @gmail", new { id = id, gmail = gmail });
+                _connection2.Execute(@"DELETE FROM rating WHERE rating.id = @id AND rating.gmail = @gmail", new { id = id, gmail = gmail });
             }
         }
 
@@ -30,9 +30,9 @@ namespace DataAccess.Ratings
             using (var _connection2 = new SqlConnection(_connection))
             {
                 var gmail = rating.gmail;
-                var movieid = rating.movieid;
+                var movieid = rating.id;
                 var rate = rating.rating;
-                const string query = @"INSERT INTO rating (gmail, movieid, rating) 
+                const string query = @"INSERT INTO rating (gmail, id, rating) 
             OUTPUT INSERTED.*
             VALUES (@gmail, @movieid, @rate)";
                 var output = _connection2.QuerySingle<Rating>(query, new { gmail, movieid, rate });
@@ -40,12 +40,12 @@ namespace DataAccess.Ratings
             }
         }
 
-        private List<Rating> GetRatings(string id, string gmail)
+        private Rating GetRatings(string id, string gmail)
         {
             using (var _connection2 = new SqlConnection(_connection))
             {
-                const string query = @"SELECT * FROM rating WHERE movieid = @id AND gmail = @gmail";
-                return (List<Rating>)_connection2.Query<Rating>(query, new { id, gmail });
+                const string query = @"SELECT * FROM rating WHERE id = @id AND gmail = @gmail";
+                return (Rating)_connection2.QueryFirstOrDefault<Rating>(query, new { id, gmail });
             }
         }
         
@@ -53,7 +53,7 @@ namespace DataAccess.Ratings
         {
             using (var _connection2 = new SqlConnection(_connection))
             {
-                const string query = @"SELECT * FROM sepdb.dbo.rating WHERE sepdb.dbo.rating.movieid = @id";
+                const string query = @"SELECT * FROM rating WHERE rating.id = @id";
                 var l = (List<Rating>)_connection2.Query<Rating>(query, new { id });
                 return l.Count > 0;
             }
@@ -64,19 +64,19 @@ namespace DataAccess.Ratings
             using (var _connection2 = new SqlConnection(_connection))
             {
                 var gmail = rating.gmail;
-                var movieid = rating.movieid;
+                var id = rating.id;
                 var rate = rating.rating;
-                const string query = @"UPDATE rating SET rating = @rate WHERE movieid = @movieid AND gmail = @gmail";
+                const string query = @"UPDATE rating SET rating = @rate WHERE rating.id = @id AND gmail = @gmail";
 
-                _connection2.Query<Rating>(query, new { rate, movieid, gmail });
-                return _connection2.Get<Rating>(movieid);
+                _connection2.Query<Rating>(query, new { rate, id, gmail });
+                return _connection2.Get<Rating>(id);
             }
         }
 
         public void Rate(Rating rating)
         {
-            List<Rating> l = GetRatings(rating.movieid, rating.gmail);
-            if (l.Count == 0)
+            Rating l = GetRatings(rating.id, rating.gmail);
+            if (l == null)
             {
                 CreateRating(rating);
             }
@@ -90,7 +90,7 @@ namespace DataAccess.Ratings
         {  
             var strs = info.Split(",");
 
-            var gr = GetRatings(strs[0], strs[1]).First();
+            var gr = GetRatings(strs[0], strs[1]);
             if (gr == null)
             {
                 return 0;
@@ -105,7 +105,7 @@ namespace DataAccess.Ratings
             {
                 if (Exists(movieid))
                 {
-                    const string query = @"SELECT AVG(sepdb.dbo.rating.rating) FROM sepdb.dbo.rating WHERE sepdb.dbo.rating.movieid = @movieid;";
+                    const string query = @"SELECT AVG(rating.rating) FROM rating WHERE rating.id = @movieid;";
                     return _connection2.Query<double>(query, new { movieid }).First();
                 }
 

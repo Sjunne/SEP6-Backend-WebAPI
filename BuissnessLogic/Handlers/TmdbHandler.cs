@@ -275,8 +275,9 @@ namespace BuissnessLogic.Handlers
             List<Cast> c = new List<Cast>();
             for (int j = 0; j < cast.Count; j++)
             {
-                if (!string.IsNullOrEmpty(cast[j].release_date))
+                if (!string.IsNullOrEmpty(cast[j].release_date) && cast[j].vote_average != 0)
                 {
+                    Console.WriteLine(cast[j].original_title);
                     var movie = cast[j];
                     cast[j].title = movie.original_title + " (" + movie.release_date.Split("-")[0] + ")";
                     cast[j].imdb_id = GetTransformedImdb(cast[j].id);
