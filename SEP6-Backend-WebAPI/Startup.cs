@@ -29,7 +29,7 @@ namespace SEP6_Backend_WebAPI
         public void ConfigureServices(IServiceCollection services)
         {
             var appSettings = Configuration.GetSection("AppSettings").Get<AppSettings>();
-            var daFactory = new DaFactory(appSettings.DatabaseConnectionStringLocal);
+            var daFactory = new DaFactory(appSettings.DatabaseConnectionString);
             services.AddSingleton<IDaFactory>(daFactory);
             services.AddHttpClient<IOmdbHandler, OmdbHandler>();
             services.AddHttpClient<ITmdbHandler, TmdbHandler>();
