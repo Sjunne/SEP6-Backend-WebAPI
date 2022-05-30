@@ -12,7 +12,8 @@ namespace DataAccess.Factories
 {
     public class DaFactory : IDaFactory
     {
-        private readonly IDbConnection _connection;
+        //private readonly IDbConnection _connection;
+        private readonly string _connection;
         private MovieRepository _movieRepository;
         private Repository _repository;
         private CommentRepository _commentRepository;
@@ -20,7 +21,8 @@ namespace DataAccess.Factories
 
         public DaFactory(string connectionString)
         {
-            _connection = new SqlConnection(connectionString);
+            //_connection = new SqlConnection(connectionString);
+            _connection = connectionString;
         }
 
         public IMovieRepository MoviesRepository()
