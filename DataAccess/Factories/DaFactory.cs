@@ -16,6 +16,7 @@ namespace DataAccess.Factories
         private MovieRepository _movieRepository;
         private Repository _repository;
         private CommentRepository _commentRepository;
+        private RatingRepository _ratingRepository;
 
         public DaFactory(string connectionString)
         {
@@ -33,18 +34,20 @@ namespace DataAccess.Factories
         {
             if(_repository == null)
                 _repository = new Repository(_connection);
-            return new Repository(_connection);
+            return _repository;
         }
         
         public ICommentRepository CommentRepository()
         {
             if (_commentRepository == null)
                 _commentRepository = new CommentRepository(_connection);
-            return new CommentRepository(_connection);
+            return _commentRepository;
         }
         public IRatingRespository RateRepository()
         {
-            return new RatingRepository(_connection);
+            if(_ratingRepository == null)
+                _ratingRepository = new RatingRepository(_connection);
+            return _ratingRepository;
         }
     }
 

@@ -40,6 +40,7 @@ namespace DataAccess.Comments
 
         List<Comment> ICommentRepository.GetComments(string id)
         {
+            
             const string query = @"SELECT * FROM comments WHERE movieId = @id";
             return (List<Comment>)_connection.Query<Comment>(query, new { id });
         }
