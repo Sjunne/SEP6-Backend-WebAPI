@@ -16,6 +16,6 @@ Project is created with:
 * Xunit
 * NSubstitude
 
-##Special Thanks To:
+## Special Thanks To:
 * https://www.themoviedb.org/
 * https://www.omdbapi.com/
